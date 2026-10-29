@@ -84,7 +84,7 @@ app.get('/alunos/:id', (req, res) => {
 });
 
 // UPDATE - Atualizar aluno
-app.put('/alunos/:id', validarAluno, (req, res) => {
+app.put('/alunos/:id', (req, res) => {
     const idAluno = Number(req.params.id);
 
     const alunoEncontrado = alunos.find(
