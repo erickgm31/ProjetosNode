@@ -7,8 +7,6 @@ const Jogo = require('../entities/Jogo.js');
 
 let proximoId = 0;
 
-
-
 router.get('/', (req, res) =>{
     return res.status(200).json(repositorio.jogos);
 }); 

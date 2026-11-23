@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090d1c">
+    <title>Seu Catálogo de Jogos</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+
+<body>
+
+    <div class="moldura">
+
+        <header class="topo">
+            <div class="topo-esquerda">
+                <img width="64" height="64" src="https://img.icons8.com/cotton/64/controller--v3.png"
+                    alt="controller--v3" />
+
+                <h1>Seu Catálogo de Jogos</h1>
+            </div>
+
+            <div class="topo-direita">
+                <div class="usuario-info">
+                    <span class="usuario-avatar" id="usuario-avatar">U</span>
+                    <span id="nome-usuario">Usuário</span>
+                </div>
+
+                <button type="button" id="btn-sair" class="btn-sair">
+                    Sair
+                </button>
+            </div>
+        </header>
+
+        <form id="form-busca" class="busca">
+            <input type="number" id="busca-id" min="1" placeholder="Buscar jogo por ID">
+            <button type="submit">Buscar</button>
+            <button type="button" id="btn-limpar-busca">Ver todos</button>
+        </form>
+        <p id="mensagem-busca" class="mensagem-busca"></p>
+
+        <main id="lista-jogos" class="grid">
+
+            <button type="button" class="card card-add" onclick="abrirModalNovo()">
+                <span class="add-icone">+</span>
+                <span>ADICIONAR JOGO</span>
+            </button>
+
+        </main>
+
+    </div>
+
+    <dialog id="modal">
+
+        <form id="form-jogo">
+
+            <div class="modal-cabecalho">
+                <span class="modal-icone">+</span>
+                <h2 id="modal-titulo">Adicionar jogo</h2>
+                <p>Preencha as informações do jogo.</p>
+            </div>
+
+            <input type="hidden" id="jogo-id">
+
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" placeholder="Título" required>
+
+            <label for="ano">Ano</label>
+            <input type="number" id="ano" placeholder="Ano" required>
+
+            <label for="genero">Gênero</label>
+            <input type="text" id="genero" placeholder="Gênero" required>
+
+            <label for="plataforma">Plataforma</label>
+            <input type="text" id="plataforma" placeholder="Plataforma" required>
+
+            <div class="acoes">
+
+                <button type="button" id="btn-cancelar"
+                    onclick="document.getElementById('modal').close()">
+                    Cancelar
+                </button>
+
+                <button type="button" id="btn-salvar" onclick="salvarJogo()">
+                    Cadastrar
+                </button>
+
+            </div>
+
+        </form>
+
+    </dialog>
+
+    <script src="catalogo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090d1c">
+    <title>Seu Catálogo de Jogos | Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <main class="login-container">
+
+        <section class="logo">
+            <img src="../Imagem/logosite.png"
+                alt="Logo Seu Catálogo de Jogos"
+                class="logo-img">
+            <div class="logo-text">
+                <h1>Seu Catálogo de Jogos</h1>
+                <p>Seu espaço para organizar jogos.</p>
+            </div>
+        </section>
+
+        <section class="login-area">
+            <form id="form-login" class="card-login">
+
+                <div class="login-heading">
+                    <span class="subtitulo">BEM-VINDO</span>
+                    <h2>Acesse sua conta</h2>
+                    <p>Entre com seus dados para continuar.</p>
+                </div>
+
+                <div class="campo">
+                    <label for="usuario">Usuário</label>
+                    <input
+                        type="text"
+                        id="usuario"
+                        placeholder="Digite seu usuário"
+                        autocomplete="username"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required>
+                </div>
+
+                <button type="submit">Acessar conta</button>
+
+                <p id="erro-login" class="erro" role="alert"></p>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script src="./login.js"></script>
+</body>
+
+</html>
